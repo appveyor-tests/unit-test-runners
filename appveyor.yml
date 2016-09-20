@@ -5,9 +5,9 @@ build:
   verbosity: minimal
 test_script:
 - ps: xunit.console.clr4.exe XUnitTestProject\bin\Debug\XUnitTestProject.dll /xml xunit-result.xml
-- ps: xunit.console.exe XUnit20TestProject\bin\Debug\XUnit20TestProject.dll -xml xunit20-result.xml
+#- ps: xunit.console.exe XUnit20TestProject\bin\Debug\XUnit20TestProject.dll -xml xunit20-result.xml
 
 - ps: $wc = New-Object 'System.Net.WebClient'
 
 - ps: $wc.UploadFile("https://ci.appveyor.com/api/testresults/xunit/$($env:APPVEYOR_JOB_ID)", (Resolve-Path .\xunit-result.xml))
-- ps: $wc.UploadFile("https://ci.appveyor.com/api/testresults/xunit/$($env:APPVEYOR_JOB_ID)", (Resolve-Path .\xunit20-result.xml))
+#- ps: $wc.UploadFile("https://ci.appveyor.com/api/testresults/xunit/$($env:APPVEYOR_JOB_ID)", (Resolve-Path .\xunit20-result.xml))
