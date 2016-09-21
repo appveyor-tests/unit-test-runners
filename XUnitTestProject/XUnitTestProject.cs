@@ -13,7 +13,7 @@ namespace XUnitTestProject
         [Fact]
         public void XUunitTestMethod2()
         {
-            Assert.Equal(1, 2);
+            Assert.NotEqual(1, 2);
         }
 
     }

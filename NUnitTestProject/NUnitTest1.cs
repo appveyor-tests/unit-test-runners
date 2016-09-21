@@ -14,7 +14,7 @@ namespace UnitTestProjects
         [Test]
         public void NunitTestMethod2()
         {
-            Assert.AreEqual(1, 2);
+            Assert.AreNotEqual(1, 2);
         }
     }
 }

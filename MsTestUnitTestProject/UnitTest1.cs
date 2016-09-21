@@ -14,7 +14,7 @@ namespace MsTestUnitTestProject
         [TestMethod]
         public void MsTestMethod2()
         {
-            Assert.AreEqual(1, 2);
+            Assert.AreNotEqual(1, 2);
         }
     }
 }
