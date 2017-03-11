@@ -13,8 +13,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XUnitTestProject", "XUnitTe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XUnit20TestProject", "XUnit20TestProject\XUnit20TestProject.csproj", "{80C1F949-171E-4A56-A29E-5294C9B32B29}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NUnit3TestProject2", "NUnit3TestProject2\NUnit3TestProject2.csproj", "{8EDF4429-251A-416D-BB68-93F227191BCF}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,10 +39,6 @@ Global
 		{80C1F949-171E-4A56-A29E-5294C9B32B29}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{80C1F949-171E-4A56-A29E-5294C9B32B29}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{80C1F949-171E-4A56-A29E-5294C9B32B29}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8EDF4429-251A-416D-BB68-93F227191BCF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8EDF4429-251A-416D-BB68-93F227191BCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8EDF4429-251A-416D-BB68-93F227191BCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8EDF4429-251A-416D-BB68-93F227191BCF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
