@@ -7,7 +7,7 @@ $headers = @{
 
 $testActual = 0;
 for ($i = 0; $i -lt 3; $i++) {
-$b = Invoke-RestMethod -Uri "$baseUrl/api/projects/AppVeyor/unit-test-runners" -Headers $headers  -Method GET
+$b = Invoke-RestMethod -Uri "$baseUrl/api/projects/AppVeyor/unit-test-runners/build/$env:APPVEYOR_BUILD_VERSION" -Headers $headers  -Method GET
 $testActual = $b.build.jobs[0].testsCount;
 if ($testActual -gt 0) {break}
 sleep 3
