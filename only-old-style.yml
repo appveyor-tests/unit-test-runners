@@ -1,8 +1,13 @@
 version: 1.0.{build}
+environment:
+  API_TOKEN:
+    secure: JKJrOC5x8xTamvxiejl/wvLbEO+TEdo7oydvqsZlq9A=
 install:
 - cmd: nuget restore
 build:
   verbosity: minimal
 test:
-  assemblies:
+  assemblies:    
     - XUnitTestProject.dll
+after_test:
+- ps: .\checkTestsNumber.ps1 -baseUrl "https://staging-ci.appveyor.com" -testsExpected 2
