@@ -9,6 +9,9 @@ build:
 test:
   assemblies:
     except:
-    - XUnitTestProject.dll
+    - MsTestUnitTestProject.dll
+    - NUnit3TestProject.dll
+    - NUnitTestProject.dll
+    - XUnit20TestProject.dll
 after_test:
 - ps: .\checkTestsNumber.ps1 -baseUrl "https://staging-ci.appveyor.com" -testsExpected 2
