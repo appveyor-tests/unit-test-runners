@@ -1,0 +1,9 @@
+version: 1.0.{build}
+install:
+- cmd: nuget restore
+build:
+  verbosity: minimal
+test:
+  assemblies:
+    only:
+    - XUnitTestProject.dll
