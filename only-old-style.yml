@@ -1,7 +1,7 @@
 version: 1.0.{build}
 environment:
   API_TOKEN:
-    secure: JKJrOC5x8xTamvxiejl/wvLbEO+TEdo7oydvqsZlq9A=
+    secure: qjR+H97oWZqZsxCoIFUY2mLZVBpq2Pf/DvnV3nXWjhA=
 install:
 - cmd: nuget restore
 build:
