@@ -1,0 +1,13 @@
+version: 1.0.{build}
+environment:
+  API_TOKEN:
+    secure: qjR+H97oWZqZsxCoIFUY2mLZVBpq2Pf/DvnV3nXWjhA=
+install:
+- cmd: nuget restore
+build:
+  verbosity: minimal
+test:
+  assemblies:    
+    - XUnitTestProject.dll
+after_test:
+- ps: .\checkTestsNumber.ps1 -baseUrl "https://ci.appveyor.com" -testsExpected 2
