@@ -14,7 +14,7 @@ sleep 3
 }
 
 if ($testActual -ne $testsExpected) {
-    Write-Error "Tests expected $testsExpected, actual $b.build.jobs[0].testsCount"
+    Write-Error "Tests expected $testsExpected, actual $testActual"
     throw
 }
 else {
