@@ -4,7 +4,7 @@ $headers = @{
   "Authorization" = "Bearer $env:API_TOKEN"
   "Content-type" = "application/json"
 }
-Start-Sleep -s 10
+Start-Sleep -s 5
 $testActual = 0;
 for ($i = 0; $i -lt 5; $i++) {
 $b = Invoke-RestMethod -Uri "$baseUrl/api/projects/$env:APPVEYOR_ACCOUNT_NAME/$env:APPVEYOR_PROJECT_SLUG/build/$env:APPVEYOR_BUILD_VERSION" -Headers $headers  -Method GET
