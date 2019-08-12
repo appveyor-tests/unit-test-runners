@@ -9,6 +9,7 @@ $testActual = 0;
 for ($i = 0; $i -lt 5; $i++) {
 $b = Invoke-RestMethod -Uri "$baseUrl/api/projects/$env:APPVEYOR_ACCOUNT_NAME/$env:APPVEYOR_PROJECT_SLUG/build/$env:APPVEYOR_BUILD_VERSION" -Headers $headers  -Method GET
 $testActual = ($b.build.jobs | ? {$_.jobId -eq $env:APPVEYOR_JOB_ID}).testsCount;
+Write-host "Current JOB_ID $env:APPVEYOR_JOB_ID"
 if ($testActual -gt 0) {break}
 sleep 3
 }
