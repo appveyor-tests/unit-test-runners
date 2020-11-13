@@ -4,6 +4,6 @@ init:
 image: Visual Studio 2017
 install:
 - nuget
-- cmd: nuget restore
+- cmd: dotnet restore
 build:
   verbosity: minimal
