@@ -4,6 +4,7 @@ environment:
     secure: qjR+H97oWZqZsxCoIFUY2mLZVBpq2Pf/DvnV3nXWjhA=
   APPVEYOR_BLOCK_DOTNETCORE_TESTS_AUTORUN: true
 install:
+- cmd: nuget restore
 - cmd: dotnet restore
 build:
   verbosity: minimal
