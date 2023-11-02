@@ -1,20 +1,32 @@
-﻿using NUnit.Framework;
+﻿using System;
+using MySql.Data.MySqlClient;
+using NUnit.Framework;
 
-namespace NUnit3TestProject
+namespace MySqlTest
 {
     [TestFixture]
-    public class NUnit3Tests
+    public class DatabaseTest
     {
-        [Test]
-        public void Nunit3TestMethod1()
+        private MySqlConnection connection;
+
+        [SetUp]
+        public void Setup()
         {
-            Assert.AreEqual(1, 1);
+            string connectionString = "server=localhost;user=root;port=3306;password=Password12!;SslMode=Required";
+            connection = new MySqlConnection(connectionString);
+            connection.Open();
         }
 
         [Test]
-        public void Nunit3TestMethod2()
+        public void TestConnection()
         {
-            Assert.AreNotEqual(1, 2);
+            Assert.That(connection.State, Is.EqualTo(System.Data.ConnectionState.Open));
+        }
+
+        [TearDown]
+        public void Teardown()
+        {
+            connection.Close();
         }
     }
 }
