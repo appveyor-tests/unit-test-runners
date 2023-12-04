@@ -3,6 +3,7 @@ image: Visual Studio 2017
 #init:
 #- ps: $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
 install:
+- cmd: dotnet add package NUnit.ConsoleRunner --version 3.16.3
 - cmd: nuget restore
 - cmd: dotnet restore
 build:
