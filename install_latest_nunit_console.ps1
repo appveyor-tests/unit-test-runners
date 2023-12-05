@@ -1,4 +1,4 @@
-Write-Host "Installing NUnit 3.15.2..." -ForegroundColor Cyan -NoNewline
+Write-Host "Installing NUnit 3.16.3..." -ForegroundColor Cyan -NoNewline
 
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 
